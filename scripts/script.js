@@ -1,12 +1,12 @@
 function drawGrid(squares) {
-    const container = document.querySelector("#container");
+    const grid = document.querySelector("#grid");
 
     // Draw rows
     for (let i = 0; i < squares; i++) {
         const row = document.createElement("div");
         row.classList.add("row");
-        row.setAttribute("id", `row${i}`);
-        container.appendChild(row);
+        row.classList.add(`row${i}`);
+        grid.appendChild(row);
 
         // Draw columns
         for (let j = 0; j < squares; j++) {
@@ -18,7 +18,7 @@ function drawGrid(squares) {
     }
 
     // Remove bottom border on last row and right border on last columns
-    const lastRow = document.querySelector(`#row${squares - 1}`);
+    const lastRow = document.querySelector(`.row${squares - 1}`);
     lastRow.style.borderBottomWidth = "0";
 
     const lastCols = document.querySelectorAll(`.col${squares - 1}`);

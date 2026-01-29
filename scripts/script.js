@@ -1,6 +1,6 @@
-function drawGrid(squares = 16) {
-    const grid = document.querySelector("#grid");
+const grid = document.querySelector("#grid");
 
+function drawGrid(squares = 16) {
     // Draw rows
     for (let i = 0; i < squares; i++) {
         const row = document.createElement("div");
@@ -25,4 +25,13 @@ function drawGrid(squares = 16) {
     lastCols.forEach((col) => col.style.borderRightWidth = "0");
 }
 
-drawGrid();
+grid.addEventListener("mousemove", function(e) {
+    if (e.target.classList[0] === "row" || e.target.id === "grid") {
+        e.target.style.backgroundColor = "white";
+    } else {
+        e.target.style.backgroundColor = "black";
+    }
+});
+
+
+drawGrid(100);

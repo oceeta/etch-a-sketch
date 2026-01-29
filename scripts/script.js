@@ -1,4 +1,4 @@
-function drawGrid(squares) {
+function drawGrid(squares = 16) {
     const grid = document.querySelector("#grid");
 
     // Draw rows
@@ -25,4 +25,4 @@ function drawGrid(squares) {
     lastCols.forEach((col) => col.style.borderRightWidth = "0");
 }
 
-drawGrid(16);
+drawGrid();

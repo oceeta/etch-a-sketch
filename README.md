@@ -1,0 +1,2 @@
+# Etch-a-Sketch
+An interactive web app project built as part of The Odin Project's full stack web development curriculum. The project demonstrates a strong understanding of three basic web development technologies (HTML, CSS, JavaScript). Particularly, it demonstrates a strong understanding of Flexbox in CSS and DOM Manipulation using JavaScript.

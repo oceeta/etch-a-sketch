@@ -50,7 +50,7 @@ changeSquares.addEventListener("click", function() {
     let squares = getNumberOfSquares();
     if (squares <= 0 || squares > 100) {
         alert("Invalid input. Please try again.");
-    } else {
+    } else if (squares > 0 && squares < 101){
         resetGrid(squares);
     }
 });
@@ -62,3 +62,9 @@ reset.addEventListener("click", function() {
 
 
 drawGrid();
+
+/**
+ * Things to work on (optional):
+ * 1. Fix uncaught type error when user presses cancel on change squares prompt
+ * 2. Implement extra credit features
+ */

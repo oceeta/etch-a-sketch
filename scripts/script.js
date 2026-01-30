@@ -26,7 +26,6 @@ function drawGrid(squares = 16) {
     lastCols.forEach((col) => col.style.borderRightWidth = "0");
 }
 
-// "reset" doesn't have to mean "restore to exact original state"
 function resetGrid(squares) {
     const rows = document.querySelectorAll(".row");
     rows.forEach((row) => grid.removeChild(row));

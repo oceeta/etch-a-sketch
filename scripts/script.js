@@ -1,4 +1,5 @@
 const grid = document.querySelector("#grid");
+const changeSquares = document.querySelector("#change-squares");
 
 function drawGrid(squares = 16) {
     // Draw rows
@@ -25,6 +26,18 @@ function drawGrid(squares = 16) {
     lastCols.forEach((col) => col.style.borderRightWidth = "0");
 }
 
+// "reset" doesn't have to mean "restore to exact original state"
+function resetGrid(squares) {
+    const rows = document.querySelectorAll(".row");
+    rows.forEach((row) => grid.removeChild(row));
+    drawGrid(squares);
+}
+
+function getNumberOfSquares() {
+    let squares = Number.parseInt(prompt("Enter a number between 1 and 100", ""));
+    return squares;
+}
+
 grid.addEventListener("mousemove", function(e) {
     if (e.target.classList[0] === "row" || e.target.id === "grid") {
         e.target.style.backgroundColor = "white";
@@ -33,5 +46,14 @@ grid.addEventListener("mousemove", function(e) {
     }
 });
 
+changeSquares.addEventListener("click", function() {
+    let squares = getNumberOfSquares();
+    if (squares <= 0 || squares > 100) {
+        alert("Invalid input. Please try again.");
+    } else {
+        resetGrid(squares);
+    }
+});
 
-drawGrid(100);
+
+drawGrid();

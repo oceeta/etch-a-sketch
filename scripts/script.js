@@ -38,11 +38,15 @@ function getNumberOfSquares() {
     return squares;
 }
 
+function getRandomColorValue() {
+    return Math.floor(Math.random() * 256);
+}
+
 grid.addEventListener("mousemove", function(e) {
     if (e.target.classList[0] === "row" || e.target.id === "grid") {
         e.target.style.backgroundColor = "white";
     } else {
-        e.target.style.backgroundColor = "black";
+        e.target.style.backgroundColor = `rgb(${getRandomColorValue()}, ${getRandomColorValue()}, ${getRandomColorValue()})`;
     }
 });
 

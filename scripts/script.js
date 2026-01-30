@@ -42,7 +42,7 @@ function getRandomColorValue() {
     return Math.floor(Math.random() * 256);
 }
 
-grid.addEventListener("mousemove", function(e) {
+grid.addEventListener("mouseover", function(e) {
     if (e.target.classList[0] === "row" || e.target.id === "grid") {
         e.target.style.backgroundColor = "white";
     } else {

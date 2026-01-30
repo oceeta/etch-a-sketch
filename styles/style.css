@@ -45,6 +45,12 @@ h1 {
     border-color: grey;
 }
 
-#change-squares {
+#change-squares,
+#reset {
     padding: 4px;
+}
+
+#buttons {
+    display: flex;
+    gap: 20px;
 }

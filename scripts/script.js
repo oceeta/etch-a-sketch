@@ -1,5 +1,6 @@
 const grid = document.querySelector("#grid");
 const changeSquares = document.querySelector("#change-squares");
+const reset = document.querySelector("#reset");
 
 function drawGrid(squares = 16) {
     // Draw rows
@@ -52,6 +53,11 @@ changeSquares.addEventListener("click", function() {
     } else {
         resetGrid(squares);
     }
+});
+
+reset.addEventListener("click", function() {
+    let squares = document.querySelectorAll(".row").length;
+    resetGrid(squares);
 });
 
 

@@ -62,9 +62,3 @@ reset.addEventListener("click", function() {
 
 
 drawGrid();
-
-/**
- * Things to work on (optional):
- * 1. Fix uncaught type error when user presses cancel on change squares prompt
- * 2. Implement extra credit features
- */

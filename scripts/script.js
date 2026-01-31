@@ -38,15 +38,19 @@ function getNumberOfSquares() {
     return squares;
 }
 
-function getRandomColorValue() {
-    return Math.floor(Math.random() * 256);
+function setRandomColor() {
+    const R = Math.floor(Math.random() * 256);
+    const G = Math.floor(Math.random() * 256);
+    const B = Math.floor(Math.random() * 256);
+
+    return `rgb(${R}, ${G}, ${B})`;
 }
 
 grid.addEventListener("mouseover", function(e) {
     if (e.target.classList[0] === "row" || e.target.id === "grid") {
         e.target.style.backgroundColor = "white";
     } else {
-        e.target.style.backgroundColor = `rgb(${getRandomColorValue()}, ${getRandomColorValue()}, ${getRandomColorValue()})`;
+        e.target.style.backgroundColor = setRandomColor();
     }
 });
 
